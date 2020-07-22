@@ -1,0 +1,234 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1,
+      shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Search Results</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="{% static 'vendor/bootstrap/css/bootstrap.min.css' %}"
+      rel="stylesheet">
+
+    <!-- Custom styles for this template -->
+    <link href="{% static 'css/blog-home.css' %}" rel="stylesheet">
+
+  </head>
+
+  <body>
+    <style>
+
+    body {
+        margin: 0;
+        font-family: -apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+        font-size: 1.2rem;
+        font-weight: 600;
+        line-height: 1.7;
+        color: #212529;
+        text-align: left;
+        background-color:paleturquoise;
+    }
+    </style>
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-light fixed-top">
+      <div class="container">
+        <a class="navbar-brand" href="/">Zaykaa</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+          data-target="#navbarResponsive" aria-controls="navbarResponsive"
+          aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarResponsive">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="/bloghome">Recipes
+                <span class="sr-only">(current)</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about">About</a>
+            </li>
+            
+            <li class="nav-item">
+              <a class="nav-link" href="contact">Contact</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/">Home</a>
+            </li>
+            
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Page Content -->
+    <div class="container my-5">
+      <!-- Side Widget -->
+      <h1 class="my-4">Search
+            <small>Results: </small>
+          </h1>
+          {% if allPosts|length < 1 %}
+          <svg class="bi bi-exclamation-octagon-fill" width="4em" height="4em" viewBox="0 0 16 16" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+  <path fill-rule="evenodd" d="M11.46.146A.5.5 0 0011.107 0H4.893a.5.5 0 00-.353.146L.146 4.54A.5.5 0 000 4.893v6.214a.5.5 0 00.146.353l4.394 4.394a.5.5 0 00.353.146h6.214a.5.5 0 00.353-.146l4.394-4.394a.5.5 0 00.146-.353V4.893a.5.5 0 00-.146-.353L11.46.146zM8 4a.905.905 0 00-.9.995l.35 3.507a.552.552 0 001.1 0l.35-3.507A.905.905 0 008 4zm.002 6a1 1 0 100 2 1 1 0 000-2z" clip-rule="evenodd"/>
+</svg>
+          <p>Your Search <b> {{query}} </b> Did not Match Any Documents</p>
+
+      
+      <div class="container-fluid mt-5">
+        <div class="card my-4">
+          <h5 class="card-header">HELLO FOODIE</h5>
+          <div class="card-body">
+            <div id="carouselExampleCaptions" class="carousel slide"
+              data-ride="carousel">
+              <ol class="carousel-indicators">
+                <li data-target="#carouselExampleCaptions" data-slide-to="0"
+                  class="active"></li>
+                <li data-target="#carouselExampleCaptions"
+                  data-slide-to="1"></li>
+                <li data-target="#carouselExampleCaptions"
+                  data-slide-to="2"></li>
+              </ol>
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <img
+                    src="https://images.unsplash.com/photo-1506368249639-73a05d6f6488?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="d-block w-100" alt="...">
+                  <div class="carousel-caption text-dark d-md-block">
+                    <h5>Discover</h5>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1514517417892-339518578cdb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="d-block w-100" alt="...">
+                  <div class="carousel-caption text-dark d-md-block">
+                    <h5>Cook</h5>
+
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img
+                    src="https://images.unsplash.com/photo-1495521821757-a1efb6729352?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=500&q=60"
+                    class="d-block w-100" alt="...">
+                  <div class="carousel-caption text-dark d-md-block">
+                    <h5>Eat,Repeat</h5>
+                    
+                  </div>
+                </div>
+              </div>
+              <a class="carousel-control-prev"
+                href="#carouselExampleCaptions" role="button"
+                data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+              </a>
+              <a class="carousel-control-next"
+                href="#carouselExampleCaptions" role="button"
+                data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+              </a>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      
+      {% endif %}
+
+      <div class="row">
+
+        <!-- Blog Entries Column -->
+        <div class="col-md-8">
+
+          
+
+          <!-- Blog Post -->
+          {% for x in allPosts %}
+          <div class="card mb-4">
+            <img class="card-img-top" src="/media/{{x.image}}" alt="Card image
+              cap">
+            <div class="card-body">
+              <h2 class="card-title">{{x.title}}</h2>
+              <p class="card-text"><div class = "preview">{{x.content| truncatechars:200}}</div></p>
+              <br>
+             
+            <div class="card-footer text-muted">
+              {{x.timeStamp}}
+            </div>
+            <br>
+            <div>
+            <a href="{{x.slug}}" class="btn btn-btn-outline-success">Read More
+              &rarr;</a>
+            </div>
+          </div>
+          
+          </div>
+
+          {% endfor %}
+
+
+
+          <!-- Pagination -->
+          <ul class="pagination justify-content-center mb-4">
+            <li class="page-item">
+              <a class="page-link" href="/bloghome">&larr; back</a>
+            </li>
+            
+          </ul>
+
+        </div>
+
+        <!-- Sidebar Widgets Column -->
+        <div class="col-md-4">
+
+          <!-- Search Widget -->
+          
+
+          
+
+          
+
+        </div>
+
+      </div>
+      <!-- /.row -->
+
+    </div>
+    <!-- /.container -->
+
+    <!-- Footer -->
+    <footer class="py-5 bg-dark">
+      <div class="container">
+        <img class="hero-lead wow fadeInLeft" data-wow-duration="1.5s" src= "https://i.imgur.com/5iOh79w.png"> 
+      </div>
+      <div class="container">
+        <p class="m-0 text-center text-white">Copyright &copy; Zaykaa's Website 2020</p>
+      </div>
+      <!-- /.container -->
+    </footer>
+
+    <!-- Bootstrap core JavaScript -->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+    <script>
+
+      let previews = document.getElementsByClassName('preview');
+      Array.from(previews).forEach((element)=>{
+        element.innerHTML = element.innerText;
+      
+      })
+
+
+    </script>
+  </body>
+
+</html>
